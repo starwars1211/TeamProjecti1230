@@ -63,13 +63,14 @@ void ATP_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 		UIEA->BindAction(IA_TP_ItemQ, ETriggerEvent::Triggered, this, &ATP_Character::ItemE);
 		UIEA->BindAction(IA_TP_ItemE, ETriggerEvent::Triggered, this, &ATP_Character::ItemQ);
 
-		UIEA->BindAction(IA_TP_Inventory, ETriggerEvent::Triggered, this, &ATP_Character::Inventory);
-
-		UIEA->BindAction(IA_TP_SkillInventory, ETriggerEvent::Triggered, this, &ATP_Character::SkillInventory);
-
 		UIEA->BindAction(IA_TP_Reload, ETriggerEvent::Triggered, this, &ATP_Character::Reload);
 
 		UIEA->BindAction(IA_TP_Ability, ETriggerEvent::Triggered, this, &ATP_Character::Ability);
+
+
+		UIEA->BindAction(IA_TP_Inventory, ETriggerEvent::Triggered, this, &ATP_Character::Inventory);
+
+		UIEA->BindAction(IA_TP_SkillInventory, ETriggerEvent::Triggered, this, &ATP_Character::SkillInventory);
 		
 	}
 
