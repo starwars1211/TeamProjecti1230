@@ -13,5 +13,20 @@ UCLASS()
 class MYPROJECT_API UTP_AnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
-	
+public:
+
+	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Stat")
+	float GroundSpeed;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Stat")
+	bool ShouldMove;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Stat")
+	bool IsFalling;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Stat")
+	FVector Velocity;
+
 };
