@@ -66,6 +66,10 @@ void ATP_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 		UIEA->BindAction(IA_TP_Inventory, ETriggerEvent::Triggered, this, &ATP_Character::Inventory);
 
 		UIEA->BindAction(IA_TP_SkillInventory, ETriggerEvent::Triggered, this, &ATP_Character::SkillInventory);
+
+		UIEA->BindAction(IA_TP_Reload, ETriggerEvent::Triggered, this, &ATP_Character::Reload);
+
+		UIEA->BindAction(IA_TP_Ability, ETriggerEvent::Triggered, this, &ATP_Character::Ability);
 		
 	}
 
@@ -123,6 +127,14 @@ void ATP_Character::ItemE(const FInputActionValue& Value)
 }
 
 void ATP_Character::ItemQ(const FInputActionValue& Value)
+{
+}
+
+void ATP_Character::Reload(const FInputActionValue& Value)
+{
+}
+
+void ATP_Character::Ability(const FInputActionValue& Value)
 {
 }
 

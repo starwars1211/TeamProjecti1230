@@ -79,6 +79,12 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "InputAction")
 	TObjectPtr<UInputAction> IA_TP_SkillInventory;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "InputAction")
+	TObjectPtr<UInputAction> IA_TP_Reload;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "InputAction")
+	TObjectPtr<UInputAction> IA_TP_Ability;
+
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	void LeftMouse(const FInputActionValue& Value);
@@ -89,6 +95,9 @@ public:
 	void Skill5(const FInputActionValue& Value);
 	void ItemE(const FInputActionValue& Value);
 	void ItemQ(const FInputActionValue& Value);
+	void Reload(const FInputActionValue& Value);
+	void Ability(const FInputActionValue& Value);
+
 
 	void Inventory(const FInputActionValue& Value);
 	void SkillInventory(const FInputActionValue& Value);
